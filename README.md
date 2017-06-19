@@ -1,4 +1,4 @@
-# [** English Version **](https://github.com/qorzj/makecli/blob/master/README.md)
+# [** English Version **](https://github.com/qorzj/makecli/blob/master/README-en.md)
 
 # 安装
 运行命令：`pip install makecli`

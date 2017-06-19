@@ -13,7 +13,7 @@ class MyInstall(install):
 
 setup(
         name = 'makecli',
-        version='0.0.1',
+        version='0.0.2',
         description='Tookit for generating command line interfaces',
         long_description='Tookit for generating command line interfaces',
         url='https://github.com/qorzj/makecli',

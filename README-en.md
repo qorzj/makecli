@@ -1,9 +1,7 @@
-# [** English Version **](https://github.com/qorzj/makecli/blob/master/README.md)
+# Install
+`pip install makecli`
 
-# 安装
-运行命令：`pip install makecli`
-
-# 怎样使用makecli
+# How to use makecli
 ```
 $ makecli -h                                                                                                     [master] 21:47:02
 OVERVIEW
@@ -25,8 +23,8 @@ USAGE
 
 ```
 
-# 怎样创建命令行工具
-1. 假设你的命令行工具取名叫mytool，首先要创建一个mytool的模板：
+# How to create CLI tool
+1. Create template of mytool
 ```
 $ makecli create mytool                                                                                                           21:52:37
 -- OK --
@@ -34,16 +32,16 @@ please edit mytool/mytool/mytool.py for your need
 
 ```
 
-2. 按照提示修改 mytool/mytool/mytool.py
-3. 有三种方法可以执行mytool：
-    * 安装mytool并执行：`makecli install mytool; mytool -h`
-    * 直接运行python脚本：`python mytool/mytool/mytool.py -h`
-    * 用加载模块的方式执行：`cd mytool; python -m mytool.mytool -h`
+2. Edit mytool/mytool/mytool.py
+3. There are three ways to run mytool
+    * `makecli install mytool; mytool -h`
+    * `python mytool/mytool/mytool.py -h`
+    * `cd mytool; python -m mytool.mytool -h`
 
-# 卸载命令行工具
+# Uninstall CLI tool
 `makecli uninstall mytool`
 
-# 把你的工具提交到 pypi.python.org  
+# Submit your tool to pypi.python.org  
 
 ```
 $ makecli submit
@@ -51,7 +49,7 @@ Please edit your own ~/.pypirc, and then run this command below:
   python setup.py sdist register upload
 ```
 
-### ~/.pypirc的例子
+### Example of ~/.pypirc
 ```
 [distutils]
 index-servers =

@@ -8,7 +8,7 @@ here = path.abspath(path.dirname(__file__))
 
 class MyInstall(install):
     def run(self):
-        print("------")
+        print("-- installing... (powered by makecli) --")
         install.run(self)
 
 setup(
@@ -16,15 +16,15 @@ setup(
         version='0.0.1',
         description='Tookit for generating command line interfaces',
         long_description='Tookit for generating command line interfaces',
-        url='',
-        author='',
-        author_email='',
+        url='https://github.com/qorzj/makecli',
+        author='qorzj',
+        author_email='inull@qq.com',
         license='MIT',
         platforms=['any'],
 
         classifiers=[
             ],
-        keywords='makecli cli',
+        keywords='makecli cli fire',
         packages = ['makecli'],
 
         cmdclass={'install': MyInstall},

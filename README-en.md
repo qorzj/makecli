@@ -28,15 +28,15 @@ USAGE
 ```
 $ makecli create mytool                                                                                                           21:52:37
 -- OK --
-please edit mytool/mytool/mytool.py for your need
+please edit mytool/mytool/run.py for your need
 
 ```
 
-2. Edit mytool/mytool/mytool.py
+2. Edit mytool/mytool/run.py
 3. There are three ways to run mytool
     * `makecli install mytool; mytool -h`
-    * `python mytool/mytool/mytool.py -h`
-    * `cd mytool; python -m mytool.mytool -h`
+    * `python mytool/mytool/run.py -h`
+    * `cd mytool; python -m mytool.run -h`
 
 # Uninstall CLI tool
 `makecli uninstall mytool`
@@ -45,9 +45,15 @@ please edit mytool/mytool/mytool.py for your need
 
 ```
 $ makecli submit
-Please edit your own ~/.pypirc, and then run this command below:
-  python setup.py sdist register upload
+Please edit your own ~/.pypirc and setup.py, and then run this command below:
+  cd <name>; python setup.py sdist register upload
 ```
+
+Steps of submit your tool to PyPI:
+ 1. register on https://pypi.python.org/ and https://testpypi.python.org/
+ 2. edit `~/.pypirc`
+ 3. edit `<name>/setup.py`
+ 4. run `cd <name>; python setup.py sdist register upload`
 
 ### Example of ~/.pypirc
 ```

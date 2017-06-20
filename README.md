@@ -36,11 +36,11 @@ USAGE
 ```
 $ makecli create mytool                                                                                                           21:52:37
 -- OK --
-please edit mytool/mytool/mytool.py for your need
+please edit mytool/mytool/run.py for your need
 
 ```
 
-2. 按照提示修改 mytool/mytool/mytool.py
+2. 按照提示修改 mytool/mytool/run.py
 3. 有三种方法可以执行mytool：
     * 安装mytool并执行：`makecli install mytool; mytool -h`
     * 直接运行python脚本：`python mytool/mytool/run.py -h`
@@ -53,10 +53,10 @@ please edit mytool/mytool/mytool.py for your need
 
 ```
 $ makecli submit
-Please edit your own ~/.pypirc, and then run this command below:
+Please edit your own ~/.pypirc and setup.py, and then run this command below:
   cd <name>; python setup.py sdist register upload
 ```
-请先在 https://pypi.python.org/ 和 https://testpypi.python.org/ 上注册账号，然后按照下面例子新建`~/.pypirc`文件。提交前还要修改`setup.py`，修改工具的描述、网址、依赖包等信息，一切就绪后敲入`makecli submit`提示的命令，就可以把你的工具提交到PyPI了。任何人只要用`pip install mytool`命令就可以安装你提交的工具。
+请先在 https://pypi.python.org/ 和 https://testpypi.python.org/ 上注册账号，然后按照下面例子新建`~/.pypirc`文件。提交前还要修改mytool目录下的`setup.py`，修改工具的描述、网址、依赖包等信息，一切就绪后敲入`makecli submit`提示的命令，就可以把你的工具提交到PyPI了。任何人只要用`pip install mytool`命令就可以安装你提交的工具。
 
 ### ~/.pypirc的例子
 ```

@@ -43,7 +43,7 @@ def uninstall(args):
     '''
     if not args['<name>']: raise cli.help()
     name = args['<name>']
-    cmd = 'pip uninstall ' + name
+    cmd = 'python -m pip uninstall ' + name
     print(cmd)
     os.system(cmd)
 
@@ -52,7 +52,7 @@ def submit(args):
     '''
     makecli submit              : Submit your tool to pypi.python.org
     '''
-    text = 'Please edit your own ~/.pypirc, and then run this command below:\n  python setup.py sdist register upload\n'
+    text = 'Please edit your own ~/.pypirc, and then run this command below:\n  cd <name>; python setup.py sdist register upload\n'
     print(text)
 
 

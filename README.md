@@ -1,10 +1,13 @@
 # [** English Version **](https://github.com/qorzj/makecli/blob/master/README-en.md)
 
 # 简介
-makecli可以帮你轻松地编写命令行工具，除了`makecli -h`这个命令以外不需要任何记忆。你唯一需要做的，就是生成代码模板，在模板的基础上进行修改。修改后的工具能轻松地安装和卸载，还能提交到pypi上供所有人使用。而这一切都不需要你去**记**任何规则！
+makecli可以帮你轻松地编写命令行工具，除了`makecli -h`这个命令以外不需要任何记忆。你唯一需要做的，就是生成代码模板，再在模板的基础上进行修改。修改后的工具能轻松地安装和卸载，还能提交到pypi上供所有人使用。而这一切都不需要你去**记**任何规则！
 
 # 安装
-运行命令：`pip install makecli`
+运行命令：`pip install makecli`  
+如果本地有多个版本的python，建议运行：`python -m pip install makecli`  
+
+注意虽然makecli同时支持python2和3，但不要用`pip3`或`python3 -m pip`进行安装，否则无法执行`makecli install`和`makecli uninstall`。如果想安装到python3环境建议用virtualenv。
 
 # 怎样使用makecli
 ```

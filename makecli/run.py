@@ -13,7 +13,7 @@ def create(args):
     name = args['<name>']
     os.mkdir(name)
     os.mkdir('{name}/{name}'.format(name=name))
-    with open(name + '/__init__.py', 'w') as f:
+    with open('{name}/{name}/__init__.py'.format(name=name), 'w') as f:
         f.write('')
     with open(name + '/setup.py', 'w') as f:
         f.write(template.setup_text.replace('{name}', name))
@@ -21,7 +21,7 @@ def create(args):
         tpl = template.sample_text.replace('{name}', name).replace('___', '\'\'\'')
         f.write(tpl)
     print('-- OK --')
-    print('please edit {name}/{name}/{name}.py for your need\n'.format(name=name))
+    print('please edit {name}/{name}/run.py for your need\n'.format(name=name))
 
 
 def install(args):

@@ -67,6 +67,7 @@ setup(
             ],
         keywords='{name}',
         packages = ['{name}'],
+        install_requires=['makecli>=0.0.3'],
 
         cmdclass={'install': MyInstall},
         entry_points={

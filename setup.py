@@ -13,9 +13,9 @@ class MyInstall(install):
 
 setup(
         name = 'makecli',
-        version='0.0.2',
+        version='0.0.3',
         description='Tookit for generating command line interfaces',
-        long_description='Tookit for generating command line interfaces',
+        long_description='README: https://github.com/qorzj/makecli',
         url='https://github.com/qorzj/makecli',
         author='qorzj',
         author_email='inull@qq.com',
@@ -26,6 +26,7 @@ setup(
             ],
         keywords='makecli cli fire',
         packages = ['makecli'],
+        install_requires=['pyperclip'],
 
         cmdclass={'install': MyInstall},
         entry_points={

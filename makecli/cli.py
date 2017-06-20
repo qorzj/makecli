@@ -1,6 +1,6 @@
 import sys
 
-__all__ = ["Cli", "CliError", "run", "error", "copy", "paste"]
+__all__ = ["Cli", "CliError", "help", "error", "copy", "paste"]
 
 
 def parse_arg_list(arg_list, fmt_index):
@@ -117,10 +117,12 @@ def error(message):
     return CliError(False, message)
 
 def copy(text):
-    pass
+    import pyperclip
+    pyperclip.copy(text)
 
 def paste():
-    pass
+    import pyperclip
+    return pyperclip.paste()
 
 
 class CliError(Exception):

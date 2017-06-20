@@ -13,7 +13,7 @@ class MyInstall(install):
 
 setup(
         name = 'makecli',
-        version='0.0.3',
+        version='0.0.6',
         description='Tookit for generating command line interfaces',
         long_description='README: https://github.com/qorzj/makecli',
         url='https://github.com/qorzj/makecli',
@@ -31,7 +31,7 @@ setup(
         cmdclass={'install': MyInstall},
         entry_points={
             'console_scripts': [
-                'makecli = makecli.makecli:main',
+                'makecli = makecli.run:main',
                 ],
             },
     )

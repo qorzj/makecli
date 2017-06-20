@@ -29,7 +29,7 @@ def copy(args):
         cli.copy(open(args['-f']).read())
         print('COPY OK')
     except:
-        raise cli.error('-f <file> : file not exist')
+        raise cli.error('-f <file> : file not exist OR copy() not supported by os')
 
 def main():
     overview = "This is overview of {name}"
@@ -67,12 +67,12 @@ setup(
             ],
         keywords='{name}',
         packages = ['{name}'],
-        install_requires=['makecli>=0.0.3'],
+        install_requires=['makecli>=0.0.6'],
 
         cmdclass={'install': MyInstall},
         entry_points={
             'console_scripts': [
-                '{name} = {name}.{name}:main',
+                '{name} = {name}.run:main',
                 ],
             },
     )

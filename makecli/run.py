@@ -1,8 +1,7 @@
 #coding: utf-8
 import os
 
-from makecli import cli
-from makecli import template
+from makecli import cli, template
 
 
 def create(args):
@@ -18,7 +17,7 @@ def create(args):
         f.write('')
     with open(name + '/setup.py', 'w') as f:
         f.write(template.setup_text.replace('{name}', name))
-    with open('{name}/{name}/{name}.py'.format(name=name), 'w') as f:
+    with open('{name}/{name}/run.py'.format(name=name), 'w') as f:
         tpl = template.sample_text.replace('{name}', name).replace('___', '\'\'\'')
         f.write(tpl)
     print('-- OK --')

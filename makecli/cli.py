@@ -26,7 +26,7 @@ def parse_arg_list(arg_list, fmt_index):
 
 def extract_args(doc_lines, arg_list):
     fmt_index = {}
-    arg_dict = {}
+    arg_dict = {'__len__': 0}
     p = 0
     for line in doc_lines:
         if not line: continue
@@ -57,6 +57,7 @@ def extract_args(doc_lines, arg_list):
             arg_dict[last_arg] = False
 
     for (segs, last_arg, arg_type), value in parse_arg_list(arg_list, fmt_index):
+        arg_dict['__len__'] += 1
         if arg_type == 'n': value = int(value)
         for seg in segs:
             arg_dict[seg] = value

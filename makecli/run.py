@@ -52,7 +52,7 @@ def submit(args):
     '''
     makecli submit              : Submit your tool to pypi.python.org
     '''
-    text = 'Please edit your own ~/.pypirc and setup.py, and then run this command below:\n  cd <name>; python setup.py sdist register upload\n'
+    text = 'Please edit your own ~/.pypirc and setup.py, and then run this command below:\n  cd <name>; python setup.py bdist_wheel upload\n'
     print(text)
 
 
